@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload to S3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload File to S3</h1>
+        
+        <div class="upload-section">
+            <input type="file" id="fileInput" accept="image/*,video/*" />
+            <label for="fileInput" class="file-label">
+                <span id="fileLabelText">Choose file</span>
+            </label>
+        </div>
+
+        <div id="previewSection" class="preview-section hidden">
+            <h3>Preview</h3>
+            <div id="previewContainer"></div>
+            <button id="uploadBtn" class="upload-btn">Upload to S3</button>
+        </div>
+
+        <div id="progressSection" class="progress-section hidden">
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill"></div>
+            </div>
+            <p id="statusText">Uploading...</p>
+        </div>
+
+        <div id="resultSection" class="result-section hidden">
+            <h3>Upload Complete</h3>
+            <div id="resultContainer"></div>
+            <button id="newUploadBtn" class="new-upload-btn">Upload Another File</button>
+        </div>
+
+        <div id="errorSection" class="error-section hidden">
+            <p id="errorMessage"></p>
+            <button id="retryBtn" class="retry-btn">Retry</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
